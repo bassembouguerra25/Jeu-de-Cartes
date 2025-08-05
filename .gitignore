@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Environment files
+.env
+.env.local
+.env.dev
+.env.test
+.env.prod
+
+# Logs
+*.log
+logs/
+
+# Cache
+cache/
+*.cache
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+build/
+public/build/
+
+# Docker
+.dockerignore
+
+# Symfony
+backend/var/cache/
+backend/var/log/
+backend/var/sessions/
+backend/public/bundles/
+
+# Vue.js
+frontend/dist/
+frontend/.vite/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Backup files
+*.bak
+*.backup
+
+# Empty directories
+.gitkeep 

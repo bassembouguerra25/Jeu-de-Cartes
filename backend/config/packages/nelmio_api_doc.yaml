@@ -1,0 +1,74 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Card Game API
+            description: API pour le jeu de cartes
+            version: 1.0.0
+        components:
+            schemas:
+                Card:
+                    type: object
+                    properties:
+                        id:
+                            type: integer
+                            description: Identifiant unique de la carte
+                        color:
+                            type: string
+                            description: Couleur de la carte (pique, cœur, carreau, trèfle)
+                        value:
+                            type: string
+                            description: Valeur de la carte (As, 2, 3, ..., Roi)
+                        displayName:
+                            type: string
+                            description: Nom d'affichage de la carte
+                HandResponse:
+                    type: object
+                    properties:
+                        success:
+                            type: boolean
+                            description: Statut de la requête
+                        data:
+                            type: object
+                            properties:
+                                cards:
+                                    type: array
+                                    items:
+                                        $ref: '#/components/schemas/Card'
+                                sortedCards:
+                                    type: array
+                                    items:
+                                        $ref: '#/components/schemas/Card'
+                RulesResponse:
+                    type: object
+                    properties:
+                        success:
+                            type: boolean
+                            description: Statut de la requête
+                        data:
+                            type: object
+                            properties:
+                                colors:
+                                    type: array
+                                    items:
+                                        type: string
+                                    description: Liste des couleurs disponibles
+                                values:
+                                    type: array
+                                    items:
+                                        type: string
+                                    description: Liste des valeurs disponibles
+                                handSize:
+                                    type: integer
+                                    description: Nombre de cartes dans une main
+                ErrorResponse:
+                    type: object
+                    properties:
+                        success:
+                            type: boolean
+                            example: false
+                        error:
+                            type: string
+                            description: Message d'erreur
+    areas:
+        path_patterns:
+            - ^/api(?!/doc$) 
