@@ -40,8 +40,8 @@ Une application de jeu de cartes moderne développée avec Symfony 6 (API) et Vu
 
 ### 1. Cloner le projet
 ```bash
-git clone <repository-url>
-cd cardgame
+git clone https://github.com/bassembouguerra25/Jeu-de-Cartes.git
+cd Jeu-de-Cartes
 ```
 
 ### 2. Lancer l'application
